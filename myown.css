@@ -1,0 +1,170 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #23242a;
+}
+
+.box {
+  position: relative;
+  background-color: #1c1c1c;
+  width: 380px;
+  height: 460px;
+  border-radius: 50px 5px;
+  overflow: hidden;
+}
+
+h2 {
+  color: aqua;
+  text-align: center;
+  font-size: 35px;
+  margin: 10px 0px;
+}
+
+/* .box::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 370px;
+  height: 450px;
+  background: linear-gradient(60deg, transparent, #45f3ff, #45f3ff);
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+}
+
+.box::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 370px;
+  height: 450px;
+  background: linear-gradient(60deg, transparent, #d9138a, #d9138a);
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+
+form {
+  position: absolute;
+  inset: 2px;
+  border-radius: 50px 5px;
+  background: black;
+  z-index: 10;
+  padding: 30px 30px;
+  flex-direction: column;
+}
+
+.inputBox {
+  position: relative;
+  margin: 30px 0;
+}
+
+.inputBox input {
+  position: relative;
+  width: 100%;
+  padding: 40px 10px 10px;
+  border: none;
+  outline: none;
+  color: rgb(17, 17, 17);
+  font-weight: 600;
+  background: transparent;
+  z-index: 10;
+}
+
+button {
+  width: 100%;
+  padding: 13px 20px;
+  border-radius: 40px;
+  font-size: 1em;
+  font-weight: 600;
+  margin-top: 6px;
+  background: #45f3ff;
+}
+
+button:active {
+  background: linear-gradient(-260deg, #d9138a, #45f3ff);
+}
+
+.inputBox label {
+  position: absolute;
+  left: 0;
+  padding: 30px 10px 10px;
+  font-size: 1em;
+  color: #8f8f8f;
+  pointer-events: none;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+
+input:focus ~ label,
+input:focus ~ label {
+  color: #45f3ff;
+  transform: translateX(-10px) translateY(-30px);
+  font-size: 0.75em;
+}
+
+.inputBox i {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #45f3ff;
+  width: 100%;
+  height: 2px;
+  border-radius: 6px;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+
+input:focus ~ i,
+input:focus ~ i {
+  height: 50px;
+}
+
+.link {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.link a {
+  color: #8f8f8f;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.link a:hover,
+.link a:nth-child(2) {
+  color: #d9138a;
+}
+
+.link a:nth-child(2) {
+  font-weight: 600;
+}
+
+.link a:nth-child(2):hover {
+  text-decoration: underline #45f3ff 2px;
+  text-underline-offset: 4px;
+  color: #45f3ff;
+}
